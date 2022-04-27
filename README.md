@@ -10,9 +10,9 @@ Features
 * Realistic atmospheres
 * Automatic update of satellite two-line elements
 
-# Comet Visualization
+# Comet Visualization (planned)
 
-This fork by Holger Isenberg https://areo.info adds a visual comet simulation with plasma tail, dust tail, sodium tail, anti tail and trail.
+This fork by Holger Isenberg https://areo.info is planned to add a visual comet simulation with plasma tail, dust tail, sodium tail, anti tail and trail.
 
 The approximation for the tail syndyne (syndyname) is based on the following papers:
 - On the Study of Comet Tails and Models of the Interplanetary Medium
