@@ -1,14 +1,6 @@
 # Cosmographia
 
-Cosmographia is an application for visualization of space missions and Solar System exploration. It uses spacecraft trajectories and planet ephemerides from SPICE kernels to precisely reproduce the geometry of encounters.
-
-Features
-* Automatic, multithread downloading of high resolution textures
-* Loading and updating of catalog files at run time
-* Shadows and reflections on models
-* Realistic stars
-* Realistic atmospheres
-* Automatic update of satellite two-line elements
+This is a development fork of and old source copy of Cosmographia from https://github.com/claurel/cosmographia. For the latest free Cosmographia version go to https://naif.jpl.nasa.gov/naif/cosmographia.html .
 
 # Comet Visualization (planned)
 
