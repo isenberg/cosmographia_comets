@@ -27,6 +27,8 @@ The approximation for the tail syndyne (syndyname) is based on the following pap
 As this source copy of Cosmographia is quite old you need to install QT4 from https://launchpad.net/~rock-core/+archive/ubuntu/qt4:
 
 ```
+mkdir qt4
+cd qt4
 cat > rock-core-ubuntu-qt4-focal.list <<OCHE
 #deb https://ppa.launchpadcontent.net/rock-core/qt4/ubuntu focal main
 deb-src http://ppa.launchpad.net/rock-core/qt4/ubuntu focal main
@@ -42,6 +44,7 @@ mkdir qt4-debs-other
 mv qt4-doc* qt4-debs-other/
 mv *.deb qt4-debs/
 sudo dpkg -i -R qt4-debs
+cd ..
 ```
 
 Using QT4 to build Cosmographia:
@@ -54,6 +57,5 @@ make
 
 To start Cosmographia:
 ```
-cd builds
-./Cosmographia
+cosmographia/builds/Cosmographia
 ```
