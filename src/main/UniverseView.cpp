@@ -99,7 +99,7 @@
 
 #include <QDebug>
 #include <QUrl>
-#include <QUrlQuery>
+//#include <QUrlQuery>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QNetworkDiskCache>
@@ -903,14 +903,14 @@ void UniverseView::paintEvent(QPaintEvent* /* event */)
     glPopAttrib();
 
     //if (GLEW_VERSION_1_5)
-    {
-        glBindBuffer(GL_ARRAY_BUFFER, 0);
-    }
+    //{
+    //    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    //}
 
     //if (GLEW_VERSION_2_0)
-    {
-        glUseProgram(0);
-    }
+    //{
+    //    glUseProgram(0);
+    //}
 
     glShadeModel(GL_FLAT);
     glDisable(GL_CULL_FACE);
@@ -1056,8 +1056,8 @@ static void drawArc(float fromAngle, float toAngle, float radius, const Vector2f
 void
 UniverseView::begin2DDrawing()
 {
-    int viewportWidth = size().width() * window()->devicePixelRatio();
-    int viewportHeight = size().height() * window()->devicePixelRatio();
+    int viewportWidth = size().width(); // * window()->devicePixelRatio();
+    int viewportHeight = size().height(); // * window()->devicePixelRatio();
     glViewport(0, 0, viewportWidth, viewportHeight);
 
     glDisable(GL_LIGHTING);
@@ -1149,8 +1149,8 @@ readableDistance(double km, unsigned int precision)
 void
 UniverseView::drawInfoOverlay()
 {
-    int viewportWidth = size().width() * window()->devicePixelRatio();
-    int viewportHeight = size().height() * window()->devicePixelRatio();
+    int viewportWidth = size().width(); // * window()->devicePixelRatio();
+    int viewportHeight = size().height(); // * window()->devicePixelRatio();
     glViewport(0, 0, viewportWidth, viewportHeight);
 
     glDisable(GL_LIGHTING);
@@ -1360,7 +1360,7 @@ UniverseView::drawInfoOverlay()
 
     if (m_markers)
     {
-        Viewport viewport(size().width() * devicePixelRatio(), size().height() * devicePixelRatio());
+        Viewport viewport(size().width() , size().height() );
         PlanarProjection projection = PlanarProjection::CreatePerspective(m_fovY, viewport.aspectRatio(), 1.0f, 100.0f);
         Vector3d observerPosition = m_observer->absolutePosition(m_simulationTime);
         Quaterniond observerOrientation = m_observer->absoluteOrientation(m_simulationTime);
@@ -1386,7 +1386,7 @@ UniverseView::drawInfoOverlay()
 
             centerMarker.setBody(centerBody);
             centerMarker.setColor(Spectrum(0.8f, 0.8f, 1.0f));
-            centerMarker.setSize(CenterMarkerSize * devicePixelRatio());
+            centerMarker.setSize(CenterMarkerSize);
             centerMarker.setStyle(Marker::Spin);
             centerMarker.setTargetSizeThreshold(CenterMarkerSize / 2.0f);
             centerMarker.setDirectionIndicatorEnabled(true);
@@ -1555,7 +1555,7 @@ void UniverseView::paintGL()
         glEnable(GL_MULTISAMPLE_ARB);
     }
 
-    float pixelScale = window()->devicePixelRatio();
+    float pixelScale = 1.0;
     Viewport mainViewport(size().width() * pixelScale, size().height() * pixelScale);
     LightingEnvironment lighting;
     if (m_reflectionsEnabled && m_reflectionMap.isValid())
@@ -2772,7 +2772,7 @@ UniverseView::setObserverCenter()
 void
 UniverseView::setPaused(bool paused)
 {
-    getStateUrl();
+    //getStateUrl();
     if (paused != m_paused)
     {
         m_paused = paused;
@@ -3973,7 +3973,7 @@ UniverseView::getStateUrl()
     url.setScheme("cosmo");
     url.setPath(bodyName(m_observer->center()));
 
-    QUrlQuery query;
+    //QUrlQuery query;
 
     double jd = secondsToDays(m_simulationTime) + vesta::J2000;
     Vector3d position = m_observer->position();
@@ -3994,7 +3994,7 @@ UniverseView::getStateUrl()
             if (vec)
             {
                 frame = "track";
-                query.addQueryItem("ftarget", bodyName(vec->target()));
+                //query.addQueryItem("ftarget", bodyName(vec->target()));
             }
         }
     }
@@ -4007,24 +4007,24 @@ UniverseView::getStateUrl()
             if (vec)
             {
                 frame = "tracklev";
-                query.addQueryItem("ftarget", bodyName(vec->target()));
+                //query.addQueryItem("ftarget", bodyName(vec->target()));
             }
 
             ConstantFrameDirection* dir = dynamic_cast<ConstantFrameDirection*>(f->secondaryDirection());
             if (dir)
             {
-                query.addQueryItem("upx", QString::number(dir->vector().x(), 'f'));
-                query.addQueryItem("upy", QString::number(dir->vector().y(), 'f'));
-                query.addQueryItem("upz", QString::number(dir->vector().z(), 'f'));
+                //query.addQueryItem("upx", QString::number(dir->vector().x(), 'f'));
+                //query.addQueryItem("upy", QString::number(dir->vector().y(), 'f'));
+                //query.addQueryItem("upz", QString::number(dir->vector().z(), 'f'));
             }
         }
     }
 
     if (selectedBody())
     {
-        query.addQueryItem("select", bodyName(selectedBody()));
+        //query.addQueryItem("select", bodyName(selectedBody()));
     }
-
+/*
     query.addQueryItem("frame", frame);
     query.addQueryItem("jd", QString::number(jd, 'f'));
     query.addQueryItem("x", QString::number(position.x(), 'f'));
@@ -4038,7 +4038,7 @@ UniverseView::getStateUrl()
     query.addQueryItem("fov", QString::number(toDegrees(m_fovY)));
 
     url.setQuery(query);
-
+*/
     return url;
 }
 
@@ -4046,6 +4046,8 @@ UniverseView::getStateUrl()
 void
 UniverseView::setStateFromUrl(const QUrl& url)
 {
+
+/*
     if (url.scheme() != "cosmo")
     {
         qDebug() << "Not a Cosmographia URL";
@@ -4177,6 +4179,7 @@ UniverseView::setStateFromUrl(const QUrl& url)
     {
         setAtmospheresVisible(atmospheres != 0);
     }
+*/
 }
 
 

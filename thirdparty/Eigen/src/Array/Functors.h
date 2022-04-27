@@ -240,6 +240,8 @@ struct ei_functor_traits<std::logical_not<T> >
 
 template<typename T>
 struct ei_functor_traits<std::greater<T> >
+//template<typename typename std:vector<T>::value_type>
+//struct ei_functor_traits<std::greater<T> >
 { enum { Cost = 1, PacketAccess = false }; };
 
 template<typename T>

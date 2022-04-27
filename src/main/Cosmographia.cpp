@@ -595,7 +595,7 @@ createSunRelativeTrajectory(const JPLEphemeris* eph, JPLEphemeris::JplObjectId i
 
 static QString cacheFilePath(const QString& fileName)
 {
-#if 0
+#if 1
     return QDesktopServices::storageLocation(QDesktopServices::CacheLocation) + "/catalog";
 #else
     return QStandardPaths::locate(QStandardPaths::CacheLocation, fileName, QStandardPaths::LocateFile);
@@ -604,7 +604,7 @@ static QString cacheFilePath(const QString& fileName)
 
 static QString cacheDirectoryPath(const QString& subdirName)
 {
-#if 0
+#if 1
     return QDesktopServices::storageLocation(QDesktopServices::CacheLocation) + "/catalog";
 #else
     return QStandardPaths::locate(QStandardPaths::CacheLocation, subdirName, QStandardPaths::LocateDirectory);
@@ -613,7 +613,7 @@ static QString cacheDirectoryPath(const QString& subdirName)
 
 static QString pictureFilePath(const QString& fileName)
 {
-#if 0
+#if 1
     return QDesktopServices::storageLocation(QDesktopServices::PicturesLocation) + "/" + fileName;
 #else
     return QStandardPaths::locate(QStandardPaths::PicturesLocation, fileName, QStandardPaths::LocateFile);
@@ -622,7 +622,7 @@ static QString pictureFilePath(const QString& fileName)
 
 static QString documentFilePath(const QString& fileName)
 {
-#if 0
+#if 1
     return QDesktopServices::storageLocation(QDesktopServices::DocumentsLocation) + "/" + fileName;
 #else
     return QStandardPaths::locate(QStandardPaths::DocumentsLocation, fileName, QStandardPaths::LocateFile);
