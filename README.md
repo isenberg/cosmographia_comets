@@ -49,7 +49,7 @@ cd ..
 
 Using QT4 to build Cosmographia:
 ```
-git clone https://github.com/claurel/cosmographia.git
+git clone https://github.com/isenberg/cosmographia_comets.git
 cd cosmographia
 qmake-qt4 cosmographia.pro
 make
