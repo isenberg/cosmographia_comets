@@ -12,15 +12,9 @@ Features
 
 # Comet Visualization (planned)
 
-This fork by Holger Isenberg https://areo.info is planned to add a visual comet simulation with plasma tail, dust tail, sodium tail, anti tail and trail.
+nothing here yet
 
-The approximation for the tail syndyne (syndyname) is based on the following papers:
-- On the Study of Comet Tails and Models of the Interplanetary Medium
-  https://ui.adsabs.harvard.edu/abs/1961ApJ...133.1091B/abstract
-- A theory of dust comets. I. Model and equations
-  https://ui.adsabs.harvard.edu/abs/1968ApJ...154..327F/abstract
-- Motion of Cometary Dust
-  https://www.lpi.usra.edu/books/CometsII/7006.pdf
+For now use my comet .json Cosmographia catalog files: https://github.com/isenberg/cosmographia_catalogs
 
 # Building on Ubuntu 20.04 LTS
 
