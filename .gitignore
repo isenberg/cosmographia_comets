@@ -1,0 +1,16 @@
+build/
+obj/
+Makefile
+moc_BodyObject.cpp
+moc_Cosmographia.cpp
+moc_FileOpenEventFilter.cpp
+moc_HelpCatalog.cpp
+moc_LocalImageLoader.cpp
+moc_NetworkTextureLoader.cpp
+moc_UniverseCatalogObject.cpp
+moc_UniverseView.cpp
+moc_VisualizerObject.cpp
+moc_WMSRequester.cpp
+moc_parserrunnable.cpp
+moc_serializerrunnable.cpp
+qrc_icons.cpp
