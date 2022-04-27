@@ -1,6 +1,6 @@
 # Cosmographia
 
-This is a development fork of and old source copy of Cosmographia from https://github.com/claurel/cosmographia. For the latest free Cosmographia version go to https://naif.jpl.nasa.gov/naif/cosmographia.html .
+This is a development fork of an old source copy from 2015 of Cosmographia from https://github.com/claurel/cosmographia. For the latest free Cosmographia version go to https://naif.jpl.nasa.gov/naif/cosmographia.html.
 
 # Comet Visualization (planned)
 
