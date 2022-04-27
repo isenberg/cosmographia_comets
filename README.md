@@ -34,6 +34,7 @@ cat > rock-core-ubuntu-qt4-focal.list <<OCHE
 deb-src http://ppa.launchpad.net/rock-core/qt4/ubuntu focal main
 OCHE
 sudo mv rock-core-ubuntu-qt4-focal.list /etc/apt/sources.list.d/
+sudo apt update
 sudo apt source qt4-x11
 sudo apt build-dep qt4-x11
 cd qt4-x11-4.8.7+dfsg
