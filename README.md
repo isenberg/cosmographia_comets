@@ -24,7 +24,7 @@ The approximation for the tail syndyne (syndyname) is based on the following pap
 
 # Building on Ubuntu 20.04 LTS
 
-As this source copy of Cosmographia is quite old you need to install QT4 from https://launchpad.net/~rock-core/+archive/ubuntu/qt4:
+As this source copy of Cosmographia is quite old, from 2015, you need to install QT4 from https://launchpad.net/~rock-core/+archive/ubuntu/qt4:
 
 ```
 mkdir qt4
