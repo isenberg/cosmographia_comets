@@ -15,11 +15,7 @@ As this source copy of Cosmographia is quite old, from 2015, you need to install
 ```
 mkdir qt4
 cd qt4
-cat > rock-core-ubuntu-qt4-focal.list <<OCHE
-#deb https://ppa.launchpadcontent.net/rock-core/qt4/ubuntu focal main
-deb-src http://ppa.launchpad.net/rock-core/qt4/ubuntu focal main
-OCHE
-sudo mv rock-core-ubuntu-qt4-focal.list /etc/apt/sources.list.d/
+sudo add-apt-repository ppa:rock-core/qt4
 sudo apt update
 sudo apt source qt4-x11
 sudo apt build-dep qt4-x11
