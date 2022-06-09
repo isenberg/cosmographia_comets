@@ -33,12 +33,12 @@ cd ..
 Using QT4 to build Cosmographia:
 ```
 git clone https://github.com/isenberg/cosmographia_comets.git
-cd cosmographia
+cd cosmographia_comets
 qmake-qt4 cosmographia.pro
 make
 ```
 
 To start Cosmographia:
 ```
-cosmographia/builds/Cosmographia
+build/Cosmographia
 ```
