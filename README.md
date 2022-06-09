@@ -10,7 +10,7 @@ For now use my comet .json Cosmographia catalog files: https://github.com/isenbe
 
 # Building on Ubuntu 20.04 LTS
 
-As this source copy of Cosmographia is quite old, from 2015, you need to install QT4 from https://launchpad.net/~rock-core/+archive/ubuntu/qt4:
+As this source copy of Cosmographia is quite old, from 2015, you need to build QT4 from the source package available on https://launchpad.net/~rock-core/+archive/ubuntu/qt4. It needs about 10 GB filesystem space. Instructions:
 
 ```
 mkdir qt4
